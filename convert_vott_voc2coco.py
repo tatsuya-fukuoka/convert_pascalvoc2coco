@@ -130,7 +130,7 @@ def convert_xml_to_json(
     json_dict["info"]['year'] = int(today.strftime("%Y"))
     json_dict["info"]['version'] = "1.0"
     json_dict["info"]['description'] = "For object detection"
-    json_dict["info"]['date_created'] = today.strftime("%Y-%M-%d")
+    json_dict["info"]['date_created'] = today.strftime("%Y-%m-%d")
     
     count_dict = {}
     
