@@ -1,20 +1,20 @@
-# 1. 概要
+## 1. 概要
 * アノテーションツール[VOTT](https://github.com/Microsoft/VoTT/releases)で出力したPascal VOC形式のXMLファイルをCOCO形式のJSONファイルへ変換するスクリプト
 * VOTTで定義されたtrainとvalに分割を考慮して、COCO形式のデータを出力する。
 
-# 2. 引用
+## 2. 引用
 * 今回は以下のGithubの内容を改変して作成しました。コア部分はこちらのコードを使用させていただきました。
 * https://github.com/Kazuhito00/convert_voc_to_coco
 
-# 3. 環境構築
-## 3.1 pip install 
+## 3. 環境構築
+### 3.1 pip install 
 * tqdm
 * natsort
 ```bash
 pip install tqdm natsort
 ```
 
-## 3.2 実行時のファイル構成
+### 3.2 実行時のファイル構成
 * convert_vott_voc2coco.pyのファイル構成は以下のようにします。
 * 以下以外でも動くかもしれませんが、動作確認していません。
 ```txt
