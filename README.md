@@ -26,7 +26,7 @@ pip install tqdm natsort
     │  └─Main
     └─JPEGImages
 ```
-* Annotationsにはxmlファイル（***.xml...）、ImageSets/Mainにはtxtファイル(***_train.txt, ***_val.txt)、JPEGImagesには画像ファイル（***.jpg...）を格納
+* Annotationsにはxmlファイル（@@@.xml...）、ImageSets/Mainにはtxtファイル(@@@_train.txt, @@@_val.txt)、JPEGImagesには画像ファイル（@@@.jpg...）を格納
 
 ## 4. 実行
 * 以下のコマンドで実行します。
@@ -44,9 +44,9 @@ python convert_vott_voc2coco.py yolox_test-PascalVOC-export
    |  ├─instances_train2017.json
    |  └─instances_val2017.json
    ├─train2017
-   |  └─***.jpg
+   |  └─@@@.jpg
    └─val2017
-      └─***.jpg
+      └─@@@.jpg
 ```
 ## 5. 活用
 [YOLOX](https://github.com/Megvii-BaseDetection/YOLOX)のdatasetsに格納して、学習に活用することができます。
