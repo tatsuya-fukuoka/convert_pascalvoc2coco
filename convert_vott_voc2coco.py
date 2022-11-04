@@ -20,18 +20,7 @@ def get_args():
         help="***PascalVOC-export",
         type=str,
     )
-    parser.add_argument(
-        "--start_bbox_id",
-        help="Bounding Box start ID.",
-        type=int,
-        default=1,
-    )
-    parser.add_argument(
-        "--category",
-        help="Specify a category list.",
-        type=str,
-        default=None,
-    )
+    
     parser.add_argument(
         "--bbox_offset",
         help="Bounding Box offset.",
