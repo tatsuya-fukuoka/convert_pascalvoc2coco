@@ -1,5 +1,5 @@
 ## 1. 概要
-* アノテーションツール[VOTT](https://github.com/Microsoft/VoTT/releases)で出力したPascal VOC形式のXMLファイルをCOCO形式のJSONファイルへ変換するスクリプト
+* アノテーションツール[VOTT](https://github.com/Microsoft/VoTT/releases)で出力したPascal VOC形式のXMLファイルをCOCO形式のJSONファイルへ変換するコード
 * VOTTで定義されたtrainとvalに分割を考慮して、COCO形式のデータセットに変換する。
 
 ## 2. 引用
