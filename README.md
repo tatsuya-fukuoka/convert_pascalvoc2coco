@@ -37,7 +37,7 @@ python convert_vott_voc2coco.py {yo setting name}-PascalVOC-export
 python convert_vott_voc2coco.py yolox_test-PascalVOC-export
 ```
 * 実行後、以下のフォルダが生成されます。{YYYYMMDD_HHMMSS}は日付・時刻です。
-* annotationsに変換後のtrain、valのjsonファイル、train2017にtrain画像、val2017にval画像が保存されます。
+* annotationsフォルダに変換後のtrain、valのjsonファイル（instances_train2017.json、instances_val2017.json）、train2017フォルダにtrain画像、val2017フォルダにval画像が保存されます。
 ```txt
 ─{YYYYMMDD_HHMMSS}_COCO_format
    ├─annotations
