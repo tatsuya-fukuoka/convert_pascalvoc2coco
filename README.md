@@ -53,3 +53,4 @@ python convert_vott_voc2coco.py yolox_test-PascalVOC-export
 
 ## 6. 紹介
 ブログ：https://chantastu.hatenablog.com/archive
+Youtube：https://youtube.com/@chantatsu
