@@ -51,6 +51,7 @@ def image_name_list_get(path):
 
 
 def train_val_img_xml_path(txt_files):
+    txt_files = natsorted(txt_files)
     train_image_path = image_name_list_get(txt_files[0])
     val_image_path = image_name_list_get(txt_files[1])
     
