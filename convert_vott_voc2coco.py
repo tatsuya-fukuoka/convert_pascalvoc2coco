@@ -27,6 +27,13 @@ def get_args():
         type=int,
         default=-1,
     )
+    parser.add_argument(
+        "-cn",
+        "--class_name", 
+        nargs='*',
+        default=None, 
+        help="Class name order"
+        )
     args = parser.parse_args()
 
     return args
@@ -70,21 +77,25 @@ def image_copy(output_each_folder, images_dir, img_files, DATASETS_NAME):
         logging.info(f'Image Copy {DATASETS_NAME[i]}: OK')
 
 
-def get_categories(xml_files):
-    classes_names = []
+def get_categories(args, xml_files):
+    if args.class_name is None:
+        classes_names = []
 
-    # 全XMLのobjectからnameを取得
-    for xml_file in xml_files:
-        xml_file = os.path.join(xml_file)
-        tree = element_tree.parse(xml_file)
-        root = tree.getroot()
+        # 全XMLのobjectからnameを取得
+        for xml_file in xml_files:
+            xml_file = os.path.join(xml_file)
+            tree = element_tree.parse(xml_file)
+            root = tree.getroot()
 
-        for member in root.findall("object"):
-            classes_names.append(member[0].text)
+            for member in root.findall("object"):
+                classes_names.append(member[0].text)
 
-    # 重複を削除してソート
-    classes_names = list(set(classes_names))
-    classes_names.sort()
+        # 重複を削除してソート
+        classes_names = list(set(classes_names))
+        classes_names.sort()
+    else:
+        classes_names = args.class_name
+    
     # Dict形式に変換
     categories = {name: i + 1 for i, name in enumerate(classes_names)}
 
