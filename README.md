@@ -36,6 +36,12 @@ python convert_vott_voc2coco.py {yo setting name}-PascalVOC-export
 # ex)
 python convert_vott_voc2coco.py yolox_test-PascalVOC-export
 ```
+なお、デフォルトではクラス名がソートされますので、abc順になります。
+クラス名の順番を指定したい場合は下記のように引数-cnの後にスペースで区切って指定の順番でクラス名を記載してください。
+```bash
+# ex)
+python convert_vott_voc2coco.py yolox_test-PascalVOC-export -cn person car motorcycle
+```
 * 実行後、以下のフォルダが生成されます。{YYYYMMDD_HHMMSS}は日付・時刻です。
 * annotationsフォルダに変換後のtrain、valのCOCO形式のjsonファイル（instances_train2017.json、instances_val2017.json）、train2017フォルダにtrain画像、val2017フォルダにval画像が保存されます。
 ```txt
